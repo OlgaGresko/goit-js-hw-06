@@ -10,15 +10,14 @@ function handleSubmit(event) {
         elements: { email, password }
       } = event.currentTarget;
 
-      const formData = { 
-        email: email.value, 
-        password: password.value, 
-    };
-
-    if (formData.email.trim() === '' || formData.password.trim() === '') {
+    if (email.value.trim() === '' || password.value.trim() === '') {
         alert('Всі поля повинні бути заповнені.');
         return;
     }
+    const formData = { 
+        email: email.value, 
+        password: password.value, 
+    };
 
     console.log(formData);
       
